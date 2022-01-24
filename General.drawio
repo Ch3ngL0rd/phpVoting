@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-01-24T07:51:10.018Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36 Edg/97.0.1072.69" etag="wLkTxsphkb5NE2wdam-z" version="16.4.5" type="github">
+<mxfile host="app.diagrams.net" modified="2022-01-24T07:56:45.560Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36 Edg/97.0.1072.69" etag="XvTzabBrM8EFwlVVMn9T" version="16.4.5" type="github">
   <diagram id="nPuw7iouVHRQGObLnJuk" name="Page-1">
     <mxGraphModel dx="1431" dy="1020" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -16,13 +16,13 @@
         <mxCell id="_xX3SB-1ansTAkctIHgU-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="_xX3SB-1ansTAkctIHgU-4" target="_xX3SB-1ansTAkctIHgU-6">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="_xX3SB-1ansTAkctIHgU-4" value="Select candidates from CCGS database&lt;br&gt;Select Voters from CCGS database&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" vertex="1" parent="1">
+        <mxCell id="_xX3SB-1ansTAkctIHgU-4" value="Select candidates from CCGS database&lt;br&gt;Add candidates to Candidate table with same ballot ID&lt;br&gt;Select Voters from CCGS database&lt;br&gt;Add voters to table with same ballot ID and empty student vote&lt;br&gt;Add information to information table" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" vertex="1" parent="1">
           <mxGeometry x="490" y="40" width="240" height="160" as="geometry" />
         </mxCell>
         <mxCell id="_xX3SB-1ansTAkctIHgU-6" value="Adds to voting table" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="800" y="150" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="_xX3SB-1ansTAkctIHgU-8" value="Voters Table -&amp;gt; Full of voters with their respecitve votes&lt;br&gt;Columns:&lt;br&gt;vote ID,&lt;br&gt;student ID,&lt;br&gt;ballot ID (links to candidate table)&lt;br&gt;student vote (links to candidate table)" style="rounded=0;whiteSpace=wrap;html=1;align=left;horizontal=1;verticalAlign=top;" vertex="1" parent="1">
+        <mxCell id="_xX3SB-1ansTAkctIHgU-8" value="Voters Table -&amp;gt; Full of voters with their respecitve votes&lt;br&gt;Columns:&lt;br&gt;ID (PK)&lt;br&gt;student ID,&lt;br&gt;ballot ID (links to candidate table)&lt;br&gt;student vote (links to candidate table)" style="rounded=0;whiteSpace=wrap;html=1;align=left;horizontal=1;verticalAlign=top;" vertex="1" parent="1">
           <mxGeometry x="980" y="70" width="350" height="190" as="geometry" />
         </mxCell>
         <mxCell id="_xX3SB-1ansTAkctIHgU-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" target="_xX3SB-1ansTAkctIHgU-11">
@@ -51,10 +51,10 @@
         <mxCell id="_xX3SB-1ansTAkctIHgU-18" value="Votes, Ballot" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="320" y="600" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="_xX3SB-1ansTAkctIHgU-20" value="Canditate Table -&amp;gt; Full of which students are running for votes linked by the ballot ID&lt;br&gt;Primary ID&lt;br&gt;Student ID&lt;br&gt;Student Photo&lt;br&gt;Ballot ID" style="rounded=0;whiteSpace=wrap;html=1;align=left;horizontal=1;verticalAlign=top;" vertex="1" parent="1">
+        <mxCell id="_xX3SB-1ansTAkctIHgU-20" value="Canditate Table -&amp;gt; Full of which students are running for votes linked by the ballot ID&lt;br&gt;ID (PK)&lt;br&gt;Primary ID&lt;br&gt;Student ID&lt;br&gt;Student Photo&lt;br&gt;Ballot ID (Foreign Key)" style="rounded=0;whiteSpace=wrap;html=1;align=left;horizontal=1;verticalAlign=top;" vertex="1" parent="1">
           <mxGeometry x="981" y="330" width="350" height="190" as="geometry" />
         </mxCell>
-        <mxCell id="_xX3SB-1ansTAkctIHgU-23" value="Information Table: Information about each ballot&lt;br&gt;Ballot ID&lt;br&gt;information String:&lt;br&gt;vote ending time? (could lock out all voting pass X)&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;horizontal=1;verticalAlign=top;" vertex="1" parent="1">
+        <mxCell id="_xX3SB-1ansTAkctIHgU-23" value="Information Table: Information about each ballot&lt;br&gt;Ballot ID (Foreign Key)&lt;br&gt;information String: - ballot name, small intro&lt;br&gt;vote ending time? (could lock out all voting pass X)" style="rounded=0;whiteSpace=wrap;html=1;align=left;horizontal=1;verticalAlign=top;" vertex="1" parent="1">
           <mxGeometry x="1341" y="180" width="350" height="190" as="geometry" />
         </mxCell>
       </root>
